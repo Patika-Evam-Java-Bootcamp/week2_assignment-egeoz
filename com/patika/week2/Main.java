@@ -15,6 +15,7 @@ public class Main {
         // Create a new member and add it to memberList.
         mem = new MemberAccountService("Ege", "Öz", "+90 555 555 5555", 100.0);
         MemberAccountService.addMember(mem);
+        // Print out the account details by querying for member.
         System.out.print((MemberAccountService.queryMember("Ege", "Öz", "+90 555 555 5555").toString()));
         
         // Create another member.
@@ -41,7 +42,7 @@ public class Main {
         if (res.getReturnStatus().equals("0")){
             System.out.printf("Invoice cancellation order was successfully completed at %s.%n", res.getTimestamp());
         }else{
-            System.out.printf("Invoice cancellation order was failed completed at %s.%n", res.getTimestamp());
+            System.out.printf("Invoice cancellation order was failed at %s.%n", res.getTimestamp());
         }
 
     }
